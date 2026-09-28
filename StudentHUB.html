@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Beginner Friendly Code Platform</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Explore.html">
+</head>
+<body data-page="home">
+
+  <!-- Left Navigation Sidebar -->
+  <aside class="sidebar-left">
+    <div class="brand">
+      <span class="brand-icon">&#x2B22;</span>
+      <span class="brand-name">StudentHub</span>
+    </div>
+
+    <nav class="nav-group">
+      <a href="index.html" class="nav-item active">Dashboard</a>
+      <a href="my-projects.html" class="nav-item">My Projects</a>
+      <a href="explore.html" class="nav-item">Explore</a>
+      <a href="learning-hub.html" class="nav-item">Learning Hub</a>
+      <a href="settings.html" class="nav-item">Settings</a>
+    </nav>
+
+    <div class="team-section">
+      <span class="section-label">Your Teams</span>
+      <div class="team-list">
+        <a href="#" class="team-item"><span class="badge-tag">AB</span> App Builders</a>
+        <a href="#" class="team-item"><span class="badge-tag">UI</span> UI Crew</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Central Main Content Area -->
+  <div class="main-wrapper">
+    <header class="topbar">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search projects, files, commits...">
+      </div>
+      <div class="topbar-actions">
+        <button type="button" class="btn-icon" id="notifBtn" title="Notifications">&#128276;</button>
+        <a href="profile.html" class="user-pill">
+          <span class="avatar-ph">A</span>
+          <span class="user-name">User</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="content-scrollable">
+      <!-- Welcome Hero Section -->
+      <section class="welcome-banner">
+        <div class="banner-text">
+          <h1>Welcome to StudentHub, User!</h1>
+          <p>Discover, learn, and showcase student projects with zero CLI stress.</p>
+        </div>
+        <div class="banner-actions">
+          <a href="explore.html" class="btn-primary">Explore Projects</a>
+          <a href="submit-project.html" class="btn-glass">Submit a Project</a>
+        </div>
+      </section>
+
+      <!-- Active Project Showcase & Actions -->
+      <section class="project-hero-card">
+        <div class="card-intro">
+          <h2 class="repo-title">My-First-App</h2>
+          <p class="repo-desc">Friendly beginner project with easy deployment workflow.</p>
+          <span class="timestamp">Latest activity: 5 hours ago</span>
+        </div>
+        <div class="card-cta">
+          <button type="button" class="btn-cloud" id="publishBtn">Publish to Cloud</button>
+        </div>
+      </section>
+
+      <!-- Git Tree & File Explorer Grid -->
+      <section class="workspace-grid">
+        <!-- Visual Git History Tree -->
+        <div class="panel-box">
+          <div class="panel-header">
+            <h3>Visual Commits</h3>
+            <select class="branch-select" id="branchPicker">
+              <option value="main">branch: main</option>
+              <option value="dev">branch: dev</option>
+            </select>
+          </div>
+          <div class="commit-tree" id="commitTimeline">
+            <div class="commit-item">
+              <span class="node active-node"></span>
+              <div class="commit-info">
+                <strong>Initial Setup</strong>
+                <small>Committed 13 days ago</small>
+              </div>
+            </div>
+            <div class="commit-item">
+              <span class="node"></span>
+              <div class="commit-info">
+                <strong>Added User Login</strong>
+                <small>Committed 13 days ago</small>
+              </div>
+            </div>
+            <div class="commit-item">
+              <span class="node"></span>
+              <div class="commit-info">
+                <strong>Fixed Navbar Bug</strong>
+                <small>Committed 17 hours ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- File List Viewer -->
+        <div class="panel-box">
+          <div class="panel-header">
+            <h3>File Directory</h3>
+            <span class="file-path">/root</span>
+          </div>
+          <ul class="file-tree" id="fileDirectory">
+            <li class="file-entry dir">&#128193; src/</li>
+            <li class="file-entry">&#128196; index.html</li>
+            <li class="file-entry">&#128196; style.css</li>
+            <li class="file-entry">&#128196; app.js</li>
+            <li class="file-entry">&#128196; README.md</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Category Filter Pills -->
+      <section class="section-block">
+        <h3>Explore by Category</h3>
+        <div class="categories-bar" id="categoryContainer">
+          <button type="button" class="cat-pill active" data-cat="all">All</button>
+          <button type="button" class="cat-pill" data-cat="Web Development">Web Development</button>
+          <button type="button" class="cat-pill" data-cat="Arduino & IoT">Arduino & IoT</button>
+          <button type="button" class="cat-pill" data-cat="Python">Python</button>
+          <button type="button" class="cat-pill" data-cat="Electronics">Electronics</button>
+          <button type="button" class="cat-pill" data-cat="AI & ML">AI & Machine Learning</button>
+        </div>
+      </section>
+
+      <!-- Featured Projects Grid -->
+      <section class="section-block">
+        <h3>Featured Projects</h3>
+        <div class="projects-grid" id="featuredProjectsGrid">
+          <div class="project-card">
+            <h4>Arduino Fire Alarm</h4>
+            <p>A simple fire detection and alert system using Arduino.</p>
+            <div class="meta-row">
+              <span class="tag">Arduino, Electronics</span>
+              <span class="difficulty">Beginner</span>
+            </div>
+            <a href="project-details.html?id=1" class="btn-card">View Project</a>
+          </div>
+
+          <div class="project-card">
+            <h4>ESP8266 Weather Station</h4>
+            <p>A weather monitoring project using sensors and ESP8266.</p>
+            <div class="meta-row">
+              <span class="tag">IoT, ESP8266</span>
+              <span class="difficulty">Beginner</span>
+            </div>
+            <a href="project-details.html?id=2" class="btn-card">View Project</a>
+          </div>
+
+          <div class="project-card">
+            <h4>Student Expense Tracker</h4>
+            <p>A web application for tracking daily student expenses.</p>
+            <div class="meta-row">
+              <span class="tag">HTML, CSS, JavaScript</span>
+              <span class="difficulty">Intermediate</span>
+            </div>
+            <a href="project-details.html?id=3" class="btn-card">View Project</a>
+          </div>
+
+          <div class="project-card">
+            <h4>College Event Portal</h4>
+            <p>A platform for discovering and registering for college events.</p>
+            <div class="meta-row">
+              <span class="tag">HTML, CSS, JavaScript</span>
+              <span class="difficulty">Intermediate</span>
+            </div>
+            <a href="project-details.html?id=4" class="btn-card">View Project</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Activity Log -->
+      <section class="section-block">
+        <h3>Recent Activity</h3>
+        <div class="list-container" id="recentActivityList">
+          <div class="list-item">
+            <strong>New Project Added</strong>
+            <p>ESP8266 Weather Station was recently added.</p>
+          </div>
+          <div class="list-item">
+            <strong>Project Updated</strong>
+            <p>Arduino Fire Alarm project was updated.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recommended For You -->
+      <section class="section-block">
+        <h3>Recommended for You</h3>
+        <div class="list-container" id="recommendedList">
+          <div class="list-item-actionable">
+            <div>
+              <strong>Smart Plant Monitor</strong>
+              <p>Arduino-based plant monitoring system.</p>
+            </div>
+            <a href="project-details.html?id=5" class="btn-card">View Project</a>
+          </div>
+          <div class="list-item-actionable">
+            <div>
+              <strong>Quiz Application</strong>
+              <p>A beginner-friendly JavaScript quiz application.</p>
+            </div>
+            <a href="project-details.html?id=6" class="btn-card">View Project</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="main-footer">
+        <p>&copy; 2026 StudentHub. Built for students.</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Right Sidebar: Guided AI Code Mentor -->
+  <aside class="sidebar-right">
+    <div class="mentor-header">
+      <div class="mentor-title">
+        <span class="ai-avatar">&#129302;</span>
+        <h4>Guided AI Mentor</h4>
+      </div>
+      <button type="button" class="btn-settings" id="mentorSettingsBtn">&#8942;</button>
+    </div>
+
+    <div class="mentor-card">
+      <div class="card-tag">Code Explanation</div>
+      <h5>Your Latest Changes Explained</h5>
+      <ul class="mentor-points">
+        <li>Breaking down recent file modifications in plain student language.</li>
+        <li>Identified sensor logic inside main entry loop.</li>
+      </ul>
+    </div>
+
+    <div class="mentor-card">
+      <div class="card-tag">Learning Path</div>
+      <h5>Helpful Tip of the Day</h5>
+      <p>Understanding Pull Requests: Think of them as review requests before merging code.</p>
+      <a href="learning-hub.html" class="inline-link">Explore Path &rarr;</a>
+    </div>
+
+    <div class="mentor-ask-box">
+      <input type="text" id="aiMentorInput" placeholder="Ask AI a question about your code...">
+      <button type="button" class="btn-send" id="aiMentorSendBtn">&#10148;</button>
+    </div>
+  </aside>
+
+  <script src="Home.js"></script>
+</body>
+</html>
